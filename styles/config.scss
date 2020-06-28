@@ -1,0 +1,17 @@
+// font Size
+$fs-lg:4em;
+$fs-md:3em;
+
+
+$hero-img: url(../assets/hero_bg.svg) no-repeat;
+$main-img: url(../assets/main_bg.svg) no-repeat;
+
+@mixin hero-bg {
+    background: $hero-img;
+    background-size: cover;
+}
+
+@mixin main-bg{
+    background: $main-img;
+    background-size: contain;
+}
