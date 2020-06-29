@@ -2,35 +2,47 @@
 
 *{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 h1,h2,h3,h4,h5,h6{
     margin:10px 0;
-    font-weight: 400;
+    // font-weight: 400;
 }
 
 h1{
-    font-size: $fs-md;
+    font-size: $fs-lg;
     font-weight: 500;
 }
 
 h2{
+    font-weight: 400;
+    font-size: $fs-lg;
+}
+
+h3{
+    font-weight: 400;
     font-size: $fs-md;
+}
+
+h4{
+    font-weight: 500;
+    font-size: $fs-sm;
+}
+
+p{
+    color:#555;
+    line-height: 23px;
 }
 
 body{
     width:100vw;
     height:10000px;
     margin:0;
-    /* background-image:url("../assets/Bkur\ Circle.svg");
-    background-size: contain;
-    background-repeat: no-repeat; */
-    
+
     /* Header */
     header{
         @include hero-bg;
-        // background-size: cover;
-        // background-repeat: no-repeat;
         color:#fff;
         height: 80vh;
         padding:0 20%;
@@ -64,20 +76,40 @@ body{
     }
     
     main{
-        // @include main-bg;
         margin-top:140px;
         padding:0 20%;
         position: relative;
 
-        >.main-bg{
+        >.bgWrapper{
             position: absolute;
-            top: 550px;
+            top: 0;
             left: 0;
-            transform: scale(1.25);
+            overflow: hidden;
+
+            >img{
+                transform: scale(1.25);
+                margin-top: 550px;
+            }
         }
 
         section{
             height: 60vh;
+
+            .grayBox{
+                height: 40%;
+
+                img{
+                    width:30%;
+                }
+            }
+
+            .padded{
+                padding:20px;
+
+                p{
+                    line-height: 30px;
+                }
+            }
         }
         
         img{
@@ -113,5 +145,18 @@ body{
     .half{
         width:50%;
         position: relative;
+        margin: 30px;
     }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.shadowBox{
+    box-shadow: 0px 5px 5px 2px #0001;
+}
+
+.grayBox{
+    background-color: #eee;
 }
